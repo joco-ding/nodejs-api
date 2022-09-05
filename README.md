@@ -5,7 +5,9 @@ API Sederhana dengan Node JS
 ## Cara Install
 
 git clone https://github.com/joco-ding/nodejs-api
+
 cd nodejs-mysql
+
 npm install
 
 ## Video Tutorial
