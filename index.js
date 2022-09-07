@@ -23,7 +23,7 @@ function addFilm(req, res) {
 }
 
 function getFilm(req, res) {
-  const id = parseInt(req.params.id, 32)
+  const id = parseInt(req.params.id, 10)
   const film = films.find(f => f.id === id)
   if (typeof film === 'undefined')
     res.status(404).json({ ok: false, message: 'Film tidak ditemukan' })
@@ -32,7 +32,7 @@ function getFilm(req, res) {
 }
 
 function putFilm(req, res) {
-  const id = parseInt(req.params.id, 32)
+  const id = parseInt(req.params.id, 10)
   const film = films.find(f => f.id === id)
   if (typeof film === 'undefined') {
     res.status(404).json({ ok: false, message: 'Film tidak ditemukan' })
@@ -50,7 +50,7 @@ function putFilm(req, res) {
 }
 
 function delFilm(req, res) {
-  const id = parseInt(req.params.id, 32)
+  const id = parseInt(req.params.id, 10)
 
   const objekIndeks = films.findIndex(f => f.id === id)
   if (objekIndeks < 0) {
